@@ -1,0 +1,718 @@
+html {
+  font-family: "Arial", "メイリオ";
+}
+
+html h2 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+html h3 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.common-title {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* #region ヘッダー */
+header {
+  background-color: white;
+  width: 90%;
+  height: 60px;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+header nav ul {
+  display: flex;
+  padding: 0;
+}
+
+header nav ul li a {
+  margin-left: 30px;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  color: pink;
+}
+/* #region ハンバーガーメニュー */
+.hamburger-menu {
+  display: none;
+}
+.menu-content {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 100%;
+  width: 70%;
+  height: 100%;
+  background-color: gray;
+  z-index: 7;
+  transition: all 0.5s;
+}
+#menu-btn-check:checked ~ .menu-content {
+  left: 30%;
+}
+.hamburger-menu nav ul {
+  margin-top: 60px;
+  display: block;
+  margin-left: 0;
+}
+.hamburger-menu nav ul li {
+  height: 60px;
+  margin: 0 10px;
+  border-bottom: solid 1px #ffffff;
+}
+/* .hamburger-menu nav ul li:nth-child(1) {
+  border-top: solid 1px #ffffff;
+} */
+.hamburger-menu nav ul li a {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 20px 0;
+  padding-left: 30px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.4);
+}
+/* #endregion ハンバーガーメニューここまで */
+
+/* #endregion */
+
+.insident {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+}
+
+/* #region 先頭へ戻るボタン */
+.fas {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 60px;
+  transition: all 0.3s ease;
+}
+
+.fas:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.fa {
+  z-index: 5;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* #endregion */
+
+/* #region fv */
+.firstview {
+  background-image: url(./img/fv.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.firstview::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.firstview-content {
+  margin: auto;
+  z-index: 3;
+  opacity: 0;
+  animation: fadein;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.firstview h2 span {
+  font-size: 60px;
+}
+
+.firstview-content h2 {
+  color: white;
+}
+
+/* #endregion */
+
+/* #region 自己紹介 */
+.aboutme {
+  display: flex;
+  padding: 70px 5%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  z-index: 1;
+}
+
+.aboutme-img img {
+  width: 536px;
+  height: 333px;
+
+  border-radius: 30px;
+}
+
+.aboutme-content {
+  height: auto;
+  width: 55%;
+  margin-left: 20px;
+  margin-bottom: auto;
+}
+
+.aboutme-content h2 {
+  margin-block-start: 0;
+}
+
+.aboutme-content ul {
+  display: flex;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  margin-top: 40px;
+}
+
+.aboutme-content li {
+  margin-right: 20px;
+}
+
+.icon {
+  transition: fill 0.3s;
+}
+
+.icon:hover {
+  fill: pink;
+}
+
+/* #endregion */
+
+/* #region スキル */
+.skill {
+  margin: 0 auto;
+  padding: 70px 5%;
+}
+
+.common-subtitle h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.skill-content table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  border-spacing: 0;
+}
+
+.skill-content tr {
+  border-bottom: solid 1px #eee;
+}
+
+.skill-content tr:hover {
+  background-color: rgba(182, 240, 255, 0.616);
+}
+
+.skill-content td,
+.skill-content th {
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}
+
+td.skill-icon {
+  background-size: 25px;
+  background-position: left 70px center;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+}
+
+.html {
+  background-image: url(img/html-5.png);
+}
+
+.css {
+  background-image: url(img/css-3.png);
+}
+
+.javascript {
+  background-image: url(img/javascript.png);
+}
+
+.vue {
+  background-image: url(img/vue.png);
+}
+
+.firebase {
+  background-image: url(img/firebase.png);
+}
+
+.nuxt {
+  background-image: url(img/nuxt-icon.png);
+}
+
+.node {
+  background-image: url(img/nodejs.png);
+}
+
+/* #endregion */
+
+/* #region 実績 */
+.works {
+  background-color: white;
+  padding: 70px 5%;
+}
+
+.works h2 {
+  margin-bottom: 20px;
+}
+
+.works ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-inline-start: 0;
+}
+
+.works ul li {
+  width: 32%;
+  border-radius: 10px;
+  border: solid 2px #dcdcdc;
+  margin-bottom: 20px;
+}
+
+.works ul img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.works ul li .content {
+  padding: 10px 20px;
+}
+
+.works ul li .content p {
+  font-size: 14px;
+}
+
+.works ul li .content h3 {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.works ul li .content h3 a {
+  font-size: 12px;
+}
+
+.mordallink {
+  border-bottom: dashed 1px black;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.mordallink:hover {
+  color: pink;
+  border-color: pink;
+}
+
+.works ul li .content .card-number {
+  text-align: right;
+  font-size: 22px;
+}
+
+/* #endregion */
+
+/* #region 経歴 */
+.timeline {
+  background-color: white;
+  padding: 70px 5%;
+  margin: 0 auto;
+}
+
+.timeline h2 {
+  margin-bottom: 50px;
+}
+
+.timeline-box {
+  width: 50%;
+  position: relative;
+  display: flex;
+  border-right: 2px dashed #cfcdcd;
+  box-sizing: border-box;
+  height: auto;
+  transition: all 1s ease-in-out 0s;
+  padding-bottom: 40px;
+}
+
+.content-box {
+  padding: 10px;
+  width: 80%;
+  text-align: right;
+}
+
+.timeline-box:hover h5 {
+  color: pink;
+}
+
+.timeline-box:hover .content-box {
+  border: dashed 2px #cfcdcd;
+}
+
+.content-box h4 {
+  color: pink;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.content-box h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.content-box p {
+  font-size: 16px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.yoko-line {
+  width: 20%;
+  height: 50px;
+  box-sizing: border-box;
+  border-bottom: dashed 2px #cfcdcd;
+}
+
+.first::before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  background-color: #cfcdcd;
+  position: absolute;
+  top: -14px;
+  right: -12px;
+  box-sizing: content-box;
+  transform: rotate(45deg);
+  border: 5px solid white;
+  box-shadow: 0 0 0 2px #cfcdcd;
+}
+
+.second {
+  margin-left: auto;
+  border: none;
+  margin-right: 2px;
+  border-left: dashed 2px #cfcdcd;
+}
+
+.second .content-box {
+  text-align: left;
+}
+
+.third::after {
+  content: "";
+  height: 14px;
+  width: 14px;
+  background-color: #cfcdcd;
+  position: absolute;
+  bottom: -14px;
+  right: -12px;
+  box-sizing: content-box;
+  transform: rotate(45deg);
+  border: 5px solid white;
+  box-shadow: 0 0 0 2px #cfcdcd;
+}
+
+/* #endregion */
+
+/* #region フォーム */
+.contact {
+  background-color: white;
+  padding: 70px 5%;
+  margin: 0 auto;
+  width: 40%;
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: #e9cdc1;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.contact textarea {
+  width: 100%;
+  height: 150px;
+  border: none;
+  background-color: #e9cdc1;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.checkbox input {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 4px;
+  left: 20px;
+}
+
+.contact button {
+  display: block;
+  border: none;
+  background-color: black;
+  border-radius: 30px;
+  color: white;
+  width: 50%;
+  height: 50px;
+  font-size: 16px;
+  margin: 0 auto 0 auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: pink;
+}
+
+/* #endregion */
+
+/* #region フッター */
+footer {
+  background-color: black;
+  height: auto;
+  padding: 20px 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li {
+  fill: white;
+  margin-right: 20px;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+/* #endregion */
+
+/* #region レスポンシブ */
+@media (max-width: 1024px) {
+  header nav ul li a {
+    text-decoration: none;
+    color: black;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .aboutme {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .aboutme-img {
+    margin-bottom: 30px;
+  }
+  .aboutme-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .aboutme-content {
+    width: auto;
+  }
+  .common-subtitle h2 {
+    font-size: 30px;
+  }
+
+  /* #region スキル */
+  .skill-content td,
+  .skill-content th {
+    width: 20%;
+  }
+  td.skill-icon {
+    background-position: left 0px center;
+    padding-left: 30px;
+  }
+  /* #endregion */
+
+  /* #region フォーム */
+  .contact {
+    width: 50%;
+  }
+  /* #endregion */
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  header {
+    padding-right: 0;
+    width: 95%;
+    justify-content: space-between;
+  }
+  .menu-btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    z-index: 8;
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+  }
+  .menu-btn span:before {
+    bottom: 8px;
+  }
+  .menu-btn span:after {
+    top: 8px;
+  }
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0
+    ); /*メニューオープン時は真ん中の線を透明にする*/
+  }
+  #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  header .hamburger-menu {
+    display: block;
+  }
+  header nav {
+    display: none;
+  }
+  header #menu-btn-check {
+    display: none;
+  }
+
+  /* #region fv */
+  .firstview-content h2 {
+    padding-left: 10px;
+  }
+  /* #endregion */
+
+  /* #region スキル */
+  .skill-content td,
+  .skill-content th {
+    font-size: 12px;
+  }
+  /* #endregion */
+
+  /* #region 実績 */
+  .works ul {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .works ul li {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .works ul li .content p {
+    font-size: 12px;
+  }
+
+  /* #endregion */
+
+  /* #region 経歴 */
+  .content-box h5 {
+    font-size: 20px;
+  }
+  .content-box p {
+    font-size: 12px;
+  }
+  /* #endregion */
+
+  /* #region フォーム */
+  .contact {
+    width: 70%;
+  }
+  /* #endregion */
+
+  /* #endregion */
+}
+
+.hide{
+  opacity: 0;
+  transform: translate(0, 50px);
+}
+
+.hide.show{
+  opacity: 1;
+  transform: translate(0,0);
+  transition: all 1s ease;
+}
